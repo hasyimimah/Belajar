@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayam Geprek Moluccas - Cita Rasa Rempah Maluku Utara</title>
+    <style>
+        /* --- Kustomisasi Warna Budaya Maluku Utara (OxyX) --- */
+        :root {
+            --primary: #c0392b; /* Merah Marun (Simbol Keberanian & Sambal) */
+            --secondary: #f1c40f; /* Kuning Emas (Kekayaan Sultan/Rempah) */
+            --dark: #1e272e; /* Hitam Arang */
+            --light: #fcfcfc; /* Putih Bersih */
+            --accent: #2c3e50; /* Biru Laut Dalam */
+        }
+        
+        body { font-family: 'Poppins', 'Segoe UI', sans-serif; margin: 0; background: var(--light); color: var(--dark); line-height: 1.6; }
+        
+        /* HEADER: Pola Tenun & Rempah */
+        header { 
+            background: var(--dark);
+            color: var(--secondary);
+            padding: 3rem 1rem;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        /* Efek Latar Belakang Tenun (Simulasi) */
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-image: url('https://w0.peakpx.com/wallpaper/798/228/HD-wallpaper-red-and-black-textile-pattern-geometric-pattern-woven-texture-background-textile-texture-pattern-art.jpg'); /* Pola Geometris Tenun */
+            background-size: contain;
+            opacity: 0.15;
+            z-index: 1;
+        }
+        
+        header * { position: relative; z-index: 2; }
+        header h1 { font-size: 2.8rem; margin: 0; letter-spacing: 2px; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
+        header p { font-size: 1.1rem; color: var(--light); font-weight: 300; margin-top: 10px; }
+        
+        /* CONTAINER */
+        .container { padding: 40px 20px; max-width: 1200px; margin: auto; }
+        
+        /* DEKORASI PEMISAH (SEPERTI GOA & BUKIT) */
+        .section-title {
+            text-align: center;
+            color: var(--primary);
+            font-size: 2rem;
+            margin-bottom: 40px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px; height: 3px;
+            background: var(--secondary);
+            margin: 10px auto;
+            border-radius: 2px;
+        }
+
+        /* MENU GRID MODERN */
+        .menu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        
+        .card { 
+            background: white; 
+            border-radius: 20px; 
+            overflow: hidden; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08); 
+            transition: 0.3s; 
+            border: 1px solid rgba(0,0,0,0.05);
+            position: relative;
+        }
+        .card:hover { transform: translateY(-10px); box-shadow: 0 15px 40px rgba(0,0,0,0.15); }
+        
+        /* Aksen Border Kuning di Atas Card */
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 6px;
+            background: var(--secondary);
+        }
+
+        .card img { width: 100%; height: 230px; object-fit: cover; }
+        
+        .card-info { padding: 25px; text-align: center; }
+        .card-info h3 { margin-top: 0; color: var(--accent); font-size: 1.4rem; }
+        .card-info p { color: #7f8c8d; font-size: 0.95rem; }
+        .price { font-weight: bold; color: var(--primary); font-size: 1.4rem; margin: 15px 0; }
+        
+        /* BUTTON WHATSAPP CUSTOM */
+        .btn-order { 
+            display: inline-block; background: var(--primary); color: white; 
+            padding: 12px 30px; border-radius: 30px; text-decoration: none; 
+            font-weight: bold; font-size: 1rem; transition: 0.3s;
+            box-shadow: 0 4px 10px rgba(192, 57, 43, 0.3);
+        }
+        .btn-order:hover { background: #a93226; transform: scale(1.05); }
+
+        /* FOOTER KESAN SEJARAH */
+        footer { 
+            text-align: center; padding: 40px 20px; 
+            background: var(--accent); color: var(--light); 
+            margin-top: 60px; font-size: 0.9rem;
+            border-top: 6px solid var(--secondary);
+        }
+        footer p { margin: 5px 0; }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+    <h1>🌴 AYAM GEPREK MOLUCCAS 🌴</h1>
+    <p>Perpaduan Pedas Mantap dengan Aroma Rempah Maluku Utara</p>
+</header>
+
+<div class="container">
+    <h2 class="section-title">Menu Cita Rasa Sultan</h2>
+    
+    <div class="menu-grid">
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?q=80&w=500" alt="Geprek Original">
+            <div class="card-info">
+                <h3>Geprek Cengkeh Tidore</h3>
+                <p>Ayam krispi gurih dengan sambal bawang beraroma cengkeh asli Maluku. Level 1-10.</p>
+                <p class="price">Rp 17.000</p>
+                <a href="https://wa.me/628123456789?text=Halo,%20saya%20mau%20pesan%20Geprek%20Cengkeh%20Tidore" class="btn-order">Pesan via WA</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1562607344-593c049309a7?q=80&w=500" alt="Geprek Keju">
+            <div class="card-info">
+                <h3>Geprek Mozzarella Ternate</h3>
+                <p>Ayam geprek modern dengan lumeran keju mewah, rasa kesukaan anak muda.</p>
+                <p class="price">Rp 25.000</p>
+                <a href="https://wa.me/628123456789?text=Halo,%20saya%20mau%20pesan%20Geprek%20Mozzarella%20Ternate" class="btn-order">Pesan via WA</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1626777553753-487624cc996e?q=80&w=500" alt="Paket Hemat">
+            <div class="card-info">
+                <h3>Paket Lengkap Moluccas</h3>
+                <p>Nasi + Ayam (Original/Mozza) + Tahu Tempe + Es Teh manis + Ekstrak Pala.</p>
+                <p class="price">Rp 28.000 / Rp 35.000</p>
+                <a href="https://wa.me/628123456789?text=Halo,%20saya%20mau%20pesan%20Paket%20Lengkap%20Moluccas" class="btn-order">Pesan via WA</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>🔥 &copy; 2026 Ayam Geprek Moluccas. Dari Ternate untuk Indonesia. 🔥</p>
+    <p>Dibuat oleh Developer Kebanggaan Maluku Utara.</p>
+</footer>
+
+</body>
+</html>
